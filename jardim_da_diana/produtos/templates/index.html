@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jardim da Diana</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navegacao.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'src/logosemfundo.png' %}" alt="Logo do Jardim da Diana" class="logo">
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'todos' %}">Produtos</a></li>
+                <li><a href="{% url 'sobrenos' %}">Sobre Nós</a></li>
+                <li><a href="{% url 'informacoes_perfil' %}">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="apresentacao">
+            <h1>Bem-vindo ao Jardim da Diana</h1>
+            <p>Produtos naturais para o seu bem-estar.</p>
+            <a href="{% url 'todos' %}" class="btn">Ver produtos</a>
+        </section>
+    </main>
+
+    <footer>
+        <img src="{% static 'src/diana_footer-removebg-preview.png' %}" alt="Rodapé logo" class="footer-logo">
+        <p>&copy; 2025 Jardim da Diana</p>
+    </footer>
+</body>
+</html>
